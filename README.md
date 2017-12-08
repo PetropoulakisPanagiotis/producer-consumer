@@ -20,6 +20,7 @@ semaphore has value 1 and now has value 0. That meanw feeder should write new co
 results.txt. Every time only one consumer can write in this file. I use mutex semaphore to achieve this. 
 
 ## Compilation - Running
-* make -> compile files
-* make test -> Run test executable file
-* make clean -> delete .o files and results.txt
+Commands: 
+* make: compile files
+* ./test: Run test executable file
+* make clean: delete .o files and results.txt
