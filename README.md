@@ -1,4 +1,4 @@
-#One reeder and n consumers
+# One reeder and n consumers
 In this program feeder writes in a buffer. Feeder has m elements(random int) to write. Buffer has 2 contents. Current number and a time stamp.
 Time stamp is the moment that the feeder writes current number. We have n consumers. Every time all consumers should read the current number 
 and then the reeder should be informed to change current number. In the end consumers have m numbers and write some results in results.txt file.
