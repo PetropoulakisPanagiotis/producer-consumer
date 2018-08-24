@@ -24,10 +24,5 @@ Note: This algorithm is quite optimal as the number of semaphores are quite smal
 1. make: compile files
 2. ./test
 
-## Helpful Links: 
-1. http://matlabtricks.com/post-5/3x3-convolution-kernels-with-online-demo
-2. http://setosa.io/ev/image-kernels/
-3. https://docs.gimp.org/en/plug-in-convmatrix.html
-
 ## Author
 * Petropoulakis Panagiotis petropoulakispanagiotis@gmail.com
