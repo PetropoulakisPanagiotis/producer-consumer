@@ -3,16 +3,16 @@
 <img src="https://cdn-images-1.medium.com/max/800/1*38NMAj0WTa_LD3ojoWsytQ.png"> <br /> 
 
 **One producer and n consumers with a buffer of only one element** <br />
-In this simulation producer writes in a buffer. Producer has m elements(random int) to write. Buffer has 2 contents. Current number and a time stamp.
+In this simulation producer writes in a buffer. Producer has m elements(random int) to write. Buffer has 2 contents. The current number and a time stamp.
 Time stamp is the date that the feeder writes the current number. There are n consumers. For each loop consumers should read the current number 
-and then the producer should be informed to change current number. In the end consumers have m numbers and then they write the results in results.txt file.
-In this file every consumer should write all m numbers, it's process id and it's running average time. Running average time is the average time that current cosnumer waits to receive all the numbers.
+and then the producer should be informed to change the current number. In the end consumers have m numbers and then they write the results in results.txt file.
+In this file every consumer should write all m numbers, it's process id and it's running average time. Running average time is the average time that the current cosnumer waits to receive all the numbers.
 
 ## How It Works
 There are 3 semaphores: empty,full,mutex and at the beginning empty is 0, full is 0 and mutex is 1 <br />
 Empty and full range: [0,n] <br />
 * Producer: <br />
- Writes in the buffer one number and current time stamp per loop. At the end of every loop ups full and empty with the value of n.
+ Writes in the buffer one number and the current time stamp per loop. At the end of every loop ups full and empty with the value of n.
 In this way consumers can read the new content. Also feeder is blocked until empty has the value of 0. In this way feeder will write his new
 content only when all the consumers have read the current content.
 
