@@ -9,8 +9,8 @@ and then the producer should be informed to change current number. In the end co
 In this file every consumer should write all m numbers, it's process id and it's running average time. Running average time is the average time that current cosnumer waits to receive all the numbers.
 
 ## How It Works
-There are 3 semaphores: empty,full,mutex and at the beginning empty is 0, full is 0 and mutex is 1.
-Empty and full range: [0,n]
+There are 3 semaphores: empty,full,mutex and at the beginning empty is 0, full is 0 and mutex is 1 <br />
+Empty and full range: [0,n] <br />
 * Producer: <br />
  Writes in the buffer one number and current time stamp per loop. At the end of every loop ups full and empty with the value of n.
 In this way consumers can read the new content. Also feeder is blocked until empty has the value of 0. In this way feeder will write his new
