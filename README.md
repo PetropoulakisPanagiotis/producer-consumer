@@ -13,7 +13,7 @@ There are 3 semaphores: empty,full,mutex and at the beginning empty is 0, full i
 Empty and full range: [0,n] <br />
 * Producer: <br />
  Writes in the buffer one number and the current time stamp per loop. At the end of every loop ups full and empty sems with the value of n.
-In this way consumers can read the new content. Also feeder is blocked until empty has the value of 0. In this way feeder will write his new
+In this way consumers can read the new content. Also producer is blocked until empty has the value of 0. In this way feeder will write his new
 content only when all the consumers have read the current content.
 
 * Consumers: <br />
