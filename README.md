@@ -12,7 +12,7 @@ In this file every consumer should write all m numbers, it's process id and it's
 There are 3 semaphores: empty,full,mutex and at the beginning empty is 0, full is 0 and mutex is 1 <br />
 Empty and full range: [0,n] <br />
 * Producer: <br />
- Writes in the buffer one number and the current time stamp per loop. At the end of every loop ups full and empty with the value of n.
+ Writes in the buffer one number and the current time stamp per loop. At the end of every loop ups full and empty sems with the value of n.
 In this way consumers can read the new content. Also feeder is blocked until empty has the value of 0. In this way feeder will write his new
 content only when all the consumers have read the current content.
 
