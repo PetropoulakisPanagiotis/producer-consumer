@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Producer-Consumer problem
 <img src="https://cdn-images-1.medium.com/max/800/1*38NMAj0WTa_LD3ojoWsytQ.png"> <br /> 
-In this program producer writes in a buffer. Producer has m elements(random int) to write. Buffer has 2 contents. Current number and a time stamp.
+In this simulation producer writes in a buffer. Producer has m elements(random int) to write. Buffer has 2 contents. Current number and a time stamp.
 Time stamp is the moment that the feeder writes the current number. There are n consumers. For each loop consumers should read the current number 
 and then the reeder should be informed to change current number. In the end consumers have m numbers and then they write the results in results.txt file.
 In this file every consumer should write all m numbers, it's process id and it's running average time. Running average time is the average time that current cosnumer waits to receive all the numbers.
