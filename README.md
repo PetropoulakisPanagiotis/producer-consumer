@@ -18,9 +18,9 @@ content only when all the consumers have read the current content.
 
 * Consumers: <br />
 Every consumer has a loop that reads from buffer. At the beginning consumer down the full sem, reads from buffer, down empty sem and then waits until full sem is equal with 0. In this way every consumer reads only once the current content and then is blocked. Also the last consumer will down the empty semaphore. This
-semaphore has value 1 and now after that the value 0. That meanens that the producer will unblocked and write the new content. Finally in the last loop consumer writes in 
+semaphore has value 1 and now after that the value 0. That means that the producer will unblocked and write the new content. Finally in the last loop consumer writes in 
 results.txt. Every time only one consumer can write in this file. I use mutex semaphore to achieve this. <br />
-Note: This algorithm is quite optimal as the number of semaphores are quite small.
+Note: This algorithm is quite optimal as the number of semaphores is quite small.
 
 ## Compilation/Run
 1. make
