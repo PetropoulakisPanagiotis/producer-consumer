@@ -2,7 +2,7 @@
 # Producer-Consumer problem
 <img src="https://cdn-images-1.medium.com/max/800/1*38NMAj0WTa_LD3ojoWsytQ.png"> <br /> 
 
-<div wight="bold">One producer and n consumers with a buffer of only one element</div>
+**One producer and n consumers with a buffer of only one element**
 In this simulation producer writes in a buffer. Producer has m elements(random int) to write. Buffer has 2 contents. Current number and a time stamp.
 Time stamp is the date that the feeder writes the current number. There are n consumers. For each loop consumers should read the current number 
 and then the producer should be informed to change current number. In the end consumers have m numbers and then they write the results in results.txt file.
