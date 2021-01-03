@@ -15,7 +15,7 @@ Note: running average time = the time needed to collect all the m items.
 * mutex:&nbsp;&nbsp;0||1, &nbsp;initial value is 1(for the shared results.txt file)
 
 <strong>Operations:</strong> 
-* semOpN(semaphore, value): &nbsp; Set semaphore's value
+* semOpN(semaphore, value): &nbsp;&nbsp;&nbsp; Set semaphore's value
 * semWaitUntilZero(semaphore): Block process till semaphore's value becomes zeros
 * semDown(semaphore): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reduce semaphore's value by one
 
