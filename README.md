@@ -8,7 +8,7 @@
 ## How It Works
 <strong>Semaphores:</strong> 
 * empty: [0, n],  initial value is 0
-* mutex: <br/><br/>0||1,   initial value is 1
+* mutex: &nbsp; 0||1,   initial value is 1
 * full: [0, n],   initial value is 0
 
 <strong>Producer:</strong><br />
