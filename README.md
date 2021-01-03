@@ -14,6 +14,11 @@ Note: running average time = the time needed to collect all the m items.
 * empty: [0, n], initial value is 0
 * mutex:&nbsp;&nbsp;0||1, &nbsp;initial value is 1, used for shared results.txt file
 
+<strong>Operations:</strong> 
+* semOpN(semaphore, value): Set semaphore's value
+* semWaitUntilZero(semaphore): Block process till semaphore's value becomes zeros
+* semDown(semaphore): Reduce semaphore's value by one
+
 <strong>Producer:</strong>
 Writes in the buffer one number and the current time stamp per loop. At the end of every loop ups full and empty sems with the value of n.
 In this way consumers can read the new content. Also producer is blocked until empty has the value of 0. In this way feeder will write his new
