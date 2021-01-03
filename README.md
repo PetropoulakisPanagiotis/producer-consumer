@@ -6,9 +6,12 @@
 In this simulation, one producer sends m elements to n consumers. These elements are stored in a shared memory segment with a capacity of one element. Each element contains a random int and a time stamp. At the end of this simulation, each consumer exports a results.txt file that contains the m elements, its pid and its running average time(= the time needed to collect all the m items).  
 
 #### How It Works
-There are 3 semaphores: empty,full,mutex and at the beginning empty is 0, full is 0 and mutex is 1 <br />
-Empty and full range: [0,n] <br />
-* Producer: <br />
+Semaphores: 
+* empty: [0, n],  initial value is 0
+* full:  [0, n],  initial value is 0
+* mutex:  0||1,   initial value is 1
+
+<strong>Producer:</strong> <br />
  Writes in the buffer one number and the current time stamp per loop. At the end of every loop ups full and empty sems with the value of n.
 In this way consumers can read the new content. Also producer is blocked until empty has the value of 0. In this way feeder will write his new
 content only when all the consumers have read the current content.
