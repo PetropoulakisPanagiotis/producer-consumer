@@ -11,12 +11,12 @@ In this simulation, one producer sends m elements to n consumers. These elements
 * full:  [0, n],  initial value is 0
 * mutex:  0||1,   initial value is 1
 
-<strong>Producer:</strong> <br />
- Writes in the buffer one number and the current time stamp per loop. At the end of every loop ups full and empty sems with the value of n.
+<strong>Producer:</strong><br />
+Writes in the buffer one number and the current time stamp per loop. At the end of every loop ups full and empty sems with the value of n.
 In this way consumers can read the new content. Also producer is blocked until empty has the value of 0. In this way feeder will write his new
 content only when all the consumers have read the current content.
 
-* Consumers: <br />
+<strong>Consumers:</strong><br />
 Every consumer has a loop that reads from buffer. At the beginning consumer down the full sem, reads from buffer, down empty sem and then waits until full sem is equal with 0. In this way every consumer reads only once the current content and then is blocked. Also the last consumer will down the empty semaphore. This
 semaphore has value 1 and now after that the value 0. That means that the producer will unblocked and write the new content. Finally in the last loop consumer writes in 
 results.txt. Every time only one consumer can write in this file. I use mutex semaphore to achieve this. <br />
