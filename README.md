@@ -9,7 +9,7 @@
 <strong>Semaphores:</strong> 
 * full: &nbsp;&nbsp;&nbsp;&nbsp;  [0, n], initial value is 0
 * empty: [0, n], initial value is 0
-* mutex: &nbsp;&nbsp;0||1, initial value is 1
+* mutex:&nbsp;&nbsp;0||1, initial value is 1
 
 <strong>Producer:</strong><br />
 Writes in the buffer one number and the current time stamp per loop. At the end of every loop ups full and empty sems with the value of n.
