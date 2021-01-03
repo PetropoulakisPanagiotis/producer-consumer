@@ -1,6 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Producer-Consumer Problem
-<img src="https://cdn-images-1.medium.com/max/800/1*38NMAj0WTa_LD3ojoWsytQ.png"> <br /> 
+<p align="center">
+<img src="producer-consumers.png" width="490px" height="320px"> <br /> <br />
+</p>
 
 <strong>One producer and n consumers with shared memory</strong>
 <p>In this simulation, one producer sends m elements to n consumers. These elements are stored in a shared memory segment with a capacity of one element. Each element contains a random int and a time stamp. At the end of this simulation, each consumer writes its pid, the m elements and the running average time in a shared results.txt file. 
