@@ -2,11 +2,8 @@
 # Producer-Consumer problem
 <img src="https://cdn-images-1.medium.com/max/800/1*38NMAj0WTa_LD3ojoWsytQ.png"> <br /> 
 
-**One producer and n consumers with a buffer of only one element** <br />
-In this simulation producer writes in a buffer. Producer has m elements(random int) to write. Buffer has 2 contents. The current number and a time stamp.
-Time stamp is the date that the feeder writes the current number. There are n consumers. For each loop consumers should read the current number 
-and then the producer should be informed to change the current number. In the end consumers have m numbers and then they write the results in results.txt file.
-In this file every consumer should write all m numbers, it's process id and it's running average time. Running average time is the average time that the current cosnumer waits to receive all the numbers.
+**One producer and n consumers(with shared memory)** <br />
+In this simulation, one producer sends m elements to n consumers. These elements are stored in a shared memory segment with a capacity of one element. Each element contains a random int and a time stamp. At the end of this simulation, each consumer exports a results.txt file that contains m elements, its pid and its running average time(=time needed to collect all m items).  
 
 ## How It Works
 There are 3 semaphores: empty,full,mutex and at the beginning empty is 0, full is 0 and mutex is 1 <br />
@@ -22,7 +19,7 @@ semaphore has value 1 and now after that the value 0. That means that the produc
 results.txt. Every time only one consumer can write in this file. I use mutex semaphore to achieve this. <br />
 Note: This algorithm is quite optimal as the number of semaphores is quite small.
 
-## Compilation/Run
+## Replicate the results
 1. make
 2. ./test
 
