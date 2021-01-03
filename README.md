@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Producer-Consumer Problem
 <p align="center">
-<img src="producer-consumers.png" width="400px" height="280px"> <br /> <br />
+<img src="producer-consumers.png" width="400px" height="280px"> <br />
 </p>
 
 <strong>One producer and n consumers with shared memory</strong>
