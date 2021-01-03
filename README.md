@@ -12,7 +12,7 @@ Note: running average time = the time needed to collect all the m items.
 <strong>Semaphores:</strong> 
 * full: &nbsp;&nbsp;&nbsp;&nbsp;  [0, n], initial value is 0
 * empty: [0, n], initial value is 0
-* mutex:&nbsp;&nbsp;0||1, &nbsp;initial value is 1(used for shared results.txt file)
+* mutex:&nbsp;&nbsp;0||1, &nbsp;initial value is 1(for the shared results.txt file)
 
 <strong>Operations:</strong> 
 * semOpN(semaphore, value): Set semaphore's value
