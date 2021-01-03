@@ -5,7 +5,7 @@
 **One producer and n consumers(with shared memory)** <br />
 In this simulation, one producer sends m elements to n consumers. These elements are stored in a shared memory segment with a capacity of one element. Each element contains a random int and a time stamp. At the end of this simulation, each consumer exports a results.txt file that contains the m elements, its pid and its running average time(= the time needed to collect all the m items).  
 
-#### How It Works
+## How It Works
 <strong>Semaphores:</strong> 
 * empty: [0, n],  initial value is 0
 * full:  [0, n],  initial value is 0
@@ -22,9 +22,9 @@ semaphore has value 1 and now after that the value 0. That means that the produc
 results.txt. Every time only one consumer can write in this file. I use mutex semaphore to achieve this. <br />
 Note: This algorithm is quite optimal as the number of semaphores is quite small.
 
-#### Replicate the results
+## Replicate the results
 1. make
 2. ./test
 
-###### Author
+##### Author
 * Petropoulakis Panagiotis petropoulakispanagiotis@gmail.com
