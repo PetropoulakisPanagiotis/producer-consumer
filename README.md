@@ -6,7 +6,7 @@
 In this simulation, one producer sends m elements to n consumers. These elements are stored in a shared memory segment with a capacity of one element. Each element contains a random int and a time stamp. At the end of this simulation, each consumer exports a results.txt file that contains the m elements, its pid and its running average time(= the time needed to collect all the m items).  
 
 #### How It Works
-Semaphores: 
+<strong>Semaphores:</strong> 
 * empty: [0, n],  initial value is 0
 * full:  [0, n],  initial value is 0
 * mutex:  0||1,   initial value is 1
