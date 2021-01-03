@@ -2,7 +2,7 @@
 # Producer-Consumer Problem
 
 **One producer and n consumers(with shared memory)** <br />
-<p class="text-right">In this simulation, one producer sends m elements to n consumers. These elements are stored in a shared memory segment with a capacity of one element. Each element contains a random int and a time stamp. At the end of this simulation, each consumer exports a results.txt file that contains the m elements, its pid and its running average time(= the time needed to collect all the m items).</p>
+<p>In this simulation, one producer sends m elements to n consumers. These elements are stored in a shared memory segment with a capacity of one element. Each element contains a random int and a time stamp. At the end of this simulation, each consumer exports a results.txt file that contains the m elements, its pid and its running average time(= the time needed to collect all the m items).</p>
 
 ## How It Works
 <strong>Semaphores:</strong> 
