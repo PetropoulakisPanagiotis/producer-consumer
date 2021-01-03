@@ -15,9 +15,10 @@ Note: running average time = the time needed to collect all the m items.
 * mutex:&nbsp;&nbsp;0||1, &nbsp;initial value is 1(for the shared results.txt file)
 
 <strong>Operations:</strong> 
-* semOpN(semaphore, value): &nbsp;&nbsp;&nbsp;Set semaphore's value
+* semDown(semaphore): Reduce semaphore's value by one
+* semOpN(semaphore, value): Set semaphore's value
 * semWaitUntilZero(semaphore): Block process till semaphore's value becomes zeros
-* semDown(semaphore): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reduce semaphore's value by one
+
 
 <strong>Producer:</strong>
 Writes in the buffer one number and the current time stamp per loop. At the end of every loop ups full and empty sems with the value of n.
