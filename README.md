@@ -5,7 +5,7 @@
 </p>
 
 <strong>One producer and n consumers with shared memory</strong>
-<p>In this simulation, one producer sends m elements to n consumers. These elements are stored in a shared memory segment with a capacity of one element. Each element contains a random int and a time stamp. At the end of this simulation, each consumer writes its pid, the m elements and the running average time in a shared results.txt file. 
+<p>In this simulation, one producer sends m elements to n consumers. These elements are stored in a shared memory segment with a capacity of one element. Each element contains a random int and a timestamp. At the end of this simulation, each consumer writes its pid, the m elements and the running average time in a shared results.txt file. 
   
 Note: running average time = the time needed to collect all the m items.
 </p>
