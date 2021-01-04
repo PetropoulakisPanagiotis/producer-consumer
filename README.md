@@ -22,7 +22,7 @@ Note: running average time = the time needed to collect all the m items.
 * semWaitUntilZero(semaphore): Block process till semaphore's value becomes zeros
 
 <strong>Producer:</strong><br />
-Publish a new element to the shared memory segment, set(semOpN) full and empty semaphores to n and wait(semWaitUntilZero) empty semaphore to become zero(wait all consumers to read the current element). Repeat this process m times.
+Publish a new element to the shared memory segment, set(semOpN) full and empty semaphores to n and wait(semWaitUntilZero) empty semaphore to become zero(wait all consumers to read the current element). <br />Repeat this process m times.
 
 <strong>Consumers:</strong><br />
 Reduce(semDown) full semaphore, get an element from the shared memory segment, wait(semWaitUntilZero) full semaphore to become zero(wait all consumers to read the current element), and reduce(semDown) the empty semaphore. Repear this process m times. 
