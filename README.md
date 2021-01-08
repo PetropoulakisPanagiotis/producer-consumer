@@ -25,9 +25,9 @@ Note: running average time = the time needed to collect all the m items.
 Publish a new element to the shared memory segment, set(semOpN) full and empty semaphores to n and wait(semWaitUntilZero) empty semaphore to become zero(wait all consumers to read the current element). <br />Repeat this process m times.
 
 <strong>Consumers:</strong><br />
-Reduce(semDown) full semaphore, get an element from the shared memory segment, wait(semWaitUntilZero) full semaphore to become zero(wait all consumers to read the current element), and reduce(semDown) the empty semaphore. <br /> Repear this process m times. 
+Reduce(semDown) full semaphore, get an element from the shared memory segment, wait(semWaitUntilZero) full semaphore to become zero(wait all consumers to read the current element), and reduce(semDown) the empty semaphore. <br /> Repeat this process m times. 
 
-Note: When the empty semaphore becomes zero, producer adds a new element into the shared memory segment.  
+Note: When the empty semaphore becomes zero, the producer adds a new element into the shared memory segment.  
 
 ## Compilation
 1. make
